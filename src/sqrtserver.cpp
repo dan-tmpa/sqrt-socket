@@ -100,7 +100,7 @@ int __cdecl main(void)
 
             // Echo the buffer back to the sender
                 snprintf(sendbuf, DEFAULT_BUFLEN, "%.4f", squareRoot);
-                iSendResult = send( ClientSocket, sendbuf, iResult, 0 );
+                iSendResult = send( ClientSocket, sendbuf, (int)strlen(sendbuf), 0 );
                 if (iSendResult == SOCKET_ERROR) {
                     printf("send failed with error: %d\n", WSAGetLastError());
                     closesocket(ClientSocket);
