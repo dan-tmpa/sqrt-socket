@@ -1,0 +1,1 @@
+g++ src/sqrtclient.cpp -o build/sqrtclient -lws2_32
